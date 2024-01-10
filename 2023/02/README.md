@@ -9,5 +9,5 @@ cmake --build build
 
 ## Run
 ```
-./build/AdventOfCode-02 /workspaces/advent-of-code/2023/02/input.txt
+./build/AdventOfCode-02
 ```
