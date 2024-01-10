@@ -28,6 +28,7 @@ class Game
         int getID() const;
         
         bool isPossible(Set startSet) const;
+        unsigned int getMinCubes() const;
         
         static std::vector<Game> loadGamesFromFile(const std::filesystem::path& path);
 

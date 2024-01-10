@@ -67,6 +67,30 @@ bool Game::isPossible(Set startSet) const
         }
     }
     return true;
+}
+unsigned int Game::getMinCubes() const
+{
+    auto red{0};
+    auto green{0};
+    auto blue{0};
+
+    for (const auto& set : this->sets)
+    {
+        if (set.red > red)
+        {
+            red = set.red;
+        }
+        if (set.green > green)
+        {
+            green = set.green;
+        }
+        if (set.blue > blue)
+        {
+            blue = set.blue;
+        }
+    }
+    
+    return red * green * blue;
 };
 
 std::ostream &operator<<(std::ostream &out, const Game &data)
